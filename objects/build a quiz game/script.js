@@ -36,7 +36,7 @@ const getRandomQuestion = (questionsArray) => {
     return questionsArray[randomIndex]
 }
 
-const getRandomcomputerChoice = (choicesArray) => {
+const getRandomComputerChoice = (choicesArray) => {
     const randomIndex = Math.floor(Math.random() * choicesArray.length)
     return choicesArray[randomIndex]
 }
@@ -46,13 +46,13 @@ const getResults = (questionObj, computerChoice) => {
     if (computerChoice === questionObj.answer) {
         return "The computer's choice is correct!"
     } else {
-        return `The computer's choice is wrong. The correct answer is:  ${questionObj.answer}`
+        return `The computer's choice is wrong. The correct answer is: ${questionObj.answer}`
     }
 }
 
 const randomQuestion = getRandomQuestion(questions);
 console.log("Question :", randomQuestion.question)
-const computerChoice = getRandomcomputerChoice(randomQuestion.choices)
+const computerChoice = getRandomComputerChoice(randomQuestion.choices)
 console.log("Computer choice:", computerChoice)
 
 const result = getResults(randomQuestion, computerChoice)
