@@ -5,3 +5,6 @@ const spinalCase = (str) => {
         .toLowerCase()
         .replace(/\s+/g, '-')
 }
+
+console.log(spinalCase('This Is Spinal Tap'))
+console.log(spinalCase('thisIsSpinalTap'))
